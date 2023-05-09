@@ -9,8 +9,12 @@ let pattern = document.getElementById("pattern");
 
 function createTriangle(char, size) {
     let triangle = "";
-    for (let i = 1; i <= size; i++) {
-        triangle += (char + " ").repeat(i) + "<br>";
+    for (let i = 0; i < size; i++) {
+        triangle += char + " ";
+        for (let j = 0; j < i; j++) {
+            triangle += char + " ";
+        }
+        triangle += "<br>";
     }
     return triangle;
 }
